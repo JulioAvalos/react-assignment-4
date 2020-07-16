@@ -32,7 +32,7 @@ class Persons extends Component {
         return (
             <div>
                 <AddPerson personAdded={this.props.onAddPerson} />
-                {this.props.persons.map(person => (
+                {this.props.prs.map(person => (
                     <Person 
                         key={person.id}
                         name={person.name} 
@@ -46,7 +46,7 @@ class Persons extends Component {
 
 const mapStateToProps = state => {
     return {
-        persons: state.persons
+        prs: state.persons
     };
 };
 
